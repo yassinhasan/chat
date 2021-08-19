@@ -153,7 +153,7 @@
             function _e($value)
             {
                 return htmlspecialchars($value);
-            }
+            } 
         }
 
                     

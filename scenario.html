@@ -1,0 +1,169 @@
+                                    <!-- front end pages  -->
+<!-- 
+
+    homepage 
+            // if there is no session or cookie avalibe 
+                redirect to signup page or login page
+
+              
+             // if already logged in so redirect to homepage
+             
+             // homepage will contain user info  like image and status and name
+                and box that contain all users that active or offline and ther message
+            
+             // when click on message that will redict on chat page
+    
+    signup page 
+            // it will contain heading signup 
+            // form will contain first name
+                                last name
+                                 email 
+                                 password
+                                 image 
+                                 and may be gender
+            
+            // and then button to sign in 
+            
+            // and <p> if he has account so log in 
+
+     
+    login page
+            // it will contain heading   login
+            // form that will contain 
+                              email 
+                              password
+                              remember me
+                              button to login
+            and <p> if he has not contain account so register to sign up page
+                
+    
+    chat page
+    
+           // it will contain 
+                icon as href to homepage 
+                and beside it
+                name of user who is i chat with him and his status and image
+
+                then chat box it will be div after div
+                div that contain message i send 
+                and div contain message that i recieve
+
+                then 
+
+                input that will i wire message on it and button to send message
+            
+ -->
+
+
+
+
+                            <!-- data base tables -->
+<!-- 
+
+    users table
+        id  primary key int 11 for users
+        unique_id int 60  it will be timestamp with randtime
+        first_name varchar 255 
+        last_name varchar 255
+        email varchar 255
+        gender varchar 255
+        password varchar 255 
+        logeed time time
+        status varchar default "offline"
+
+    
+    messages tables
+        
+        id primary key int 11 
+        unique_sender_id int 11  equal to unique id of user who is logged in and saved in session
+        unique_reciever_id int 11  will equal to id that i will get it from get 
+        message text 
+        message_time current timestamp
+
+
+
+
+ -->
+
+
+
+                                <!-- secario of backend -->
+
+<!-- 
+    first page will be signup page 
+        -- first check if there any logged user or no if yes redirect to homepage
+
+        // it will be with ajax to insertpage.php 
+
+        // ajax will send all data with it
+        // return error so i will append it to results div
+        // or succesful so redirect to login page
+
+
+        --after sumpit page 
+        i will inset into users table
+          first name -last name- email - hashed password -- logged time
+          image 
+          uniqueid 
+
+          if succesfful 
+          redirect to login page
+
+        
+        // after wtire email it will make query to check if this email exists or no 
+        // if no insert it if yes make result as error
+        
+        also make check for password if empty or short passowr
+
+
+
+
+   second page will be login page       
+    
+        here also i make ajax request to checklogin.php
+        by use email and password 
+        if result is ok 
+        and remeber me is ok save it to cookie
+        if remember me is not on so save it to session
+        by logincode == equal to uniqueid
+
+
+    homepage 
+        
+        first check if there is any logincode in session or in cookie
+
+        function islogged()
+            {   
+                logincode = "";
+                if iset logincode in cookie get it and get that user by query
+                if iset logincode in session get it and get that user by query
+                if not set in session or cookie  so he is not logged in so redirect him to loggin page
+
+
+            }
+        
+        
+        // if he is logged to get data of him like name and image and status
+        
+        // in homepage chatbox 
+        // i will make query to get all users except already logged in 
+        // and get theri message last message by their unique id and get substr of it 
+        // when click on it 
+        // open chat page and get uniqeid of that user by get
+
+
+
+    chatpage
+    
+        // i have now reciever id 
+
+       // when i wirte message and then click on send
+       // on click on send button i will make ajax request
+
+       // to messagesdata.php to enter message where  messagesendid = loggedid 
+       // message reciver id = euql to userid
+       // then second query will get two types of message 
+       // messages of me 
+
+    
+ -->

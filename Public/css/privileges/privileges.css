@@ -1,0 +1,35 @@
+.wraper
+{
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 40px;
+}
+.add-task
+{
+    width: fit-content;
+    margin: 20px 0;
+
+}
+.table-wraper
+{
+    padding-bottom: 50px;
+} 
+.add-task button svg 
+{
+    margin-left: 15px;
+}
+
+
+.table .action button svg 
+{
+   pointer-events: none;
+}
+
+
+@media (max-width: 767px)
+{
+    .table .action button
+    {
+       margin-bottom: 8px;
+    }  
+}

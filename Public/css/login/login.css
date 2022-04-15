@@ -1,0 +1,199 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.login-page .box {
+    width: 760px;
+    min-height: 460px;
+	display: flex;
+	flex-wrap: wrap;
+	background-position: -230px center;
+	background-size: cover;
+	/* background-image: url("../../images/login/background.png"); */
+	position: relative;
+	z-index: 1;
+	box-shadow: 0 0 20px #ddd;
+	transition: all .5s ease;
+}
+.login-page .box::before
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+    background: #000008;
+	z-index: -1;
+}
+.login-page .box .left,.login-page .box .right
+{
+	flex: 0 0 50%;
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 40px;
+}
+.login-page .box .left h2,.login-page .box .right h2
+{
+	color: #fff;
+	margin: 0 0 20px;
+}
+
+.login-page .box .left button,.login-page .box .right button
+{
+	border:1px solid #fff;
+	background: transparent;
+	padding: 10px 20px; 
+	color: #fff;
+	font-size: 16px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.login-page .box .left button.active
+{
+    background: cadetblue;
+}
+.login-page .box .right button.active
+{
+    background: #f44336;
+}
+
+.form
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+	background: #fff;
+	height: 100%;
+	display: flex;
+    justify-content: center;
+	flex-direction: column;
+	padding: 20px;
+	transition: all .5s ease;
+	
+}
+.login-form h2,.register-form h2
+{
+	margin: 0 0 25px;
+}
+.login-form  .form-group,.register-form .form-group
+{
+	margin-bottom: 15px;
+    position: relative;
+}
+.login-form  .form-group input,.register-form .form-group input
+{
+	width: 100%;
+	height: 50px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+    padding: 20px 0 0 10px;
+	font-size: 16px;
+}
+.login-form  .form-group input:focus,.login-form  .form-group input:hover,
+.register-form  .form-group input:focus,.register-form  .form-group input:hover
+{
+    border: none !important;
+	outline: none !important;
+    border-bottom: 1px solid #ddd;
+    box-shadow: none !important;
+}
+.login-form  .form-group label,.register-form .form-group label
+{
+    position: absolute;
+    top: 48%;
+    transform : translateY(-80%);
+    left: 10px;
+    transition: all 0.2s ease;
+    color: #0d6efd;
+    pointer-events: none;
+}
+.login-form  .form-group label.focus,.register-form .form-group label.focus
+{
+    top: 5px;
+}
+.login-form .check-group
+{
+	margin-bottom: 20px;
+}
+.login-form .check-group label
+{
+	font-size: 14px;
+	color: #333;
+}
+.login-form .btn-login,.register-form .btn-register
+{
+	width: 100%;
+	padding: 10px 20px;
+	background: #f44336;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+.register-form .btn-register
+{
+	background: #009688;
+}
+.hidden-form
+{
+	max-height: 0;
+	visibility: hidden;
+	opacity: 0;
+}
+.box.slide
+{
+	background-position: 120px center;
+}
+.box.slide .form
+{
+	right: 50%;
+}
+
+@media (max-width: 767px)
+{
+
+
+	.login-page .box .form
+	{
+		width: 100%;
+		position: relative;
+		right: auto;
+		top: auto;
+		height: auto;
+	}
+	.box.slide .form
+	{
+		right: auto;
+	}
+	.box.slide
+	{
+		background-position: center;
+		background-size: cover;
+	}
+	.login-form
+	{
+		height: 316px
+	}
+
+}

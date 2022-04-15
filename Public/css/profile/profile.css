@@ -1,0 +1,56 @@
+.profile-container
+{
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+.profile_card,.security_card,.contact_card , .profile_form_wraper
+,.contact_form_wraper,.security_form_wraper{
+    width: 100% !important;
+    padding: 0px 20px;
+}
+.profile-img
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    padding: 8px 0;
+}
+.profile-img img 
+{
+    max-width: 200px;
+}
+.profile-img img.edit
+{
+   cursor: pointer;
+}
+
+.security_card , .contact_card , .contact_form_wraper , .security_form_wraper
+{
+    margin: 50px 0;
+}
+.first-col
+{
+    position: relative;
+}
+.first-col::after
+{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 1px;
+    background: #00000020;
+    right: 0px;
+
+}
+.profile_form_wraper.hidden,.contact_form_wraper.hidden ,.security_form_wraper.hidden
+{
+    display: none;
+}
+.form-contact-save-btn
+{
+    text-align: end;
+    margin-top: 24px;
+    padding-bottom: 8px;
+}

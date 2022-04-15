@@ -1,0 +1,45 @@
+.wraper
+{
+    max-width: 900px;
+    margin: 50px auto 200px auto;
+    padding: 0 40px;
+}
+.add-task
+{
+    width: fit-content;
+    margin: 20px 0;
+
+}
+.table-wraper
+{
+    max-height: 300px;
+    overflow: auto;
+}
+.add-task button svg 
+{
+    margin-left: 15px;
+}
+.dataTables_scroll
+{
+    padding: 20px 0;
+}
+
+.table .action button svg 
+{
+   pointer-events: none;
+}
+
+.checkboxdiv
+{
+    margin: 10px 0 0 0;
+}
+.selectAllDiv{
+      width: fit-content;
+}
+@media (max-width: 767px)
+{
+    .table .action button
+    {
+       margin-bottom: 8px;
+    }  
+}

@@ -1,0 +1,22 @@
+TODO: 
+ rearrange users by mesages   done
+
+ when connect change to login and change in chatuser except login area 
+
+ when logout change to logout and change it in all area  
+
+ when disconnect change to logout also and when connet change to login 
+
+ when change set unread messages count  done 
+
+ //////////
+
+ send files 
+    how to send files
+        when drop file in text area change it's style to drop area
+        when drop make div and it's background this file
+        when click on send send this file
+        by make hidden input if file is file so click on input
+        
+
+ 
